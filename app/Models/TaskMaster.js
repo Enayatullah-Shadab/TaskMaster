@@ -1,43 +1,44 @@
-<!DOCTYPE html>
-<html lang="en">
+// export default class Value {
+//     constructor(data) {
+//         this.title = data.title
+//     }
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="assets/style/main.css">
-    <link rel="stylesheet" href="assets/style/style.css">
-    <title>TaskMaster</title>
-</head>
+//     get Template() {
 
-<body>
-    <header>
-        <nav class="navbar navbar-dark navbar-expand bg-dark text-light">
-            <a class="navbar-brand" href="#">
-                <img src="assets/img/logo.png" width="45" height="45" alt="" loading="lazy">
-                <span class="ml-2">Task Master</span>
-            </a>
-        </nav>
-    </header>
+//         return /*html*/`
+//         <div class="card p-2 value">
+//             ${this.title}
+//         </div>
+//         `
+//     }
+// }
 
-    <main class="container">
-        <div class="row  d-flex flex-column">
-            <div class="col-6">
-                <div class="row">
-                    <div class="col-4 my-2">
-                        <input type="text" id="listName" placeholder="List Name ...">
-                    </div>
 
-                    <div class="col-3 mt-2" id="color"> Color:</div>
 
-                    <div class="col-4 mt-2">
-                        <button class="round-top" id="create">Create</button>
-                    </div>
-                </div>
-            </div>
-            <div class="col-6">
+
+
+
+
+
+
+
+
+
+
+
+
+export default class TaskMaster {
+    constructor(listName, color,) {
+        this.listName = listName
+        this.color = color
+
+        console.log("Hello form constructor of model")
+    }
+
+
+    get Template() {
+        return `
+    div class="col-6">
                 <div class="card w-60" style="width:50%;">
                     <div class="card-header">
                         Catagories
@@ -71,18 +72,7 @@
                     <div class="card-footer text-muted">
                         <div> <input type="text" placeholder="Add Task"><span id="plus" class="pl-0"> + </span> </div>
                     </div>
-                </div>
-            </div>
-            <div id="app"></div>
-    </main>
+                </div>  `
 
-    <footer class="bg-dark text-light">
-        <div class="text-center">
-            <p><small>Made by Shadab at CodeWorks</small></p>
-        </div>
-    </footer>
-
-    <script src="app/main.js" type="module"></script>
-</body>
-
-</html>
+    }
+}
