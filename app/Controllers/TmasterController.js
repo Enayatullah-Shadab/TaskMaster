@@ -18,8 +18,7 @@ export default class TaskMasterController {
     }
 
     createTask(event) {
-        event.preventDefault()
-        taskMasterService.createTask()
+        taskMasterService.createTask
         console.log("button clicked")
     }
 
