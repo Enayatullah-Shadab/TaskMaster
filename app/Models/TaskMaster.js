@@ -34,8 +34,6 @@ export default class TaskMaster {
 
         console.log("Hello form constructor of model")
     }
-
-
     get Template() {
         return `
     div class="col-6">

@@ -1,11 +1,11 @@
 import { ProxyState } from "../AppState.js";
-import Value from "../Models/Value.js";
+import TaskMaster from "../Models/TaskMaster.js";
 
-class ValuesService {
-  addValue() {
-    ProxyState.values = [...ProxyState.values, new Value({ title: Math.random() })]
+class TaskMasterService {
+  createTaskMaster() {
+    ProxyState.TaskMaster = [...ProxyState.TaskMaster, new TaskMaster({ title: Math.random() })]
   }
 }
 
-export const valuesService = new ValuesService();
+export const taskMasterService = new TaskMasterService();
 

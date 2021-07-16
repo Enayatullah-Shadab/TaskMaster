@@ -1,7 +1,7 @@
-// import ValuesController from "./Controllers/ValuesController.js";
+import TaskMasterController from "./Controllers/TaskMasterController.js";
 
-// class App {
-//   valuesController = new ValuesController();
-// }
+class App {
+  taskMasterController = new TaskMasterController();
+}
 
-// window["app"] = new App();
+window["app"] = new App();
