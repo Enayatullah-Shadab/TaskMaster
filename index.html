@@ -24,20 +24,21 @@
 
     <main class="container">
         <div class="row  d-flex flex-column">
-            <div class="col-6">
+            <div class="col-6 md-6">
                 <div class="row">
-                    <div class="col-4 my-2">
+                    <div class="col-4 md-6 my-2">
                         <input type="text" id="listName" placeholder="List Name ...">
                     </div>
 
-                    <div class="col-3 mt-2" id="color"> Color:</div>
+                    <div class="col-3 md-6 mt-2" id="color"> Color:</div>
 
-                    <div class="col-4 mt-2">
-                        <button class="round-top" id="create">Create</button>
+                    <div class="col-4 md-6  mt-2">
+                        <button class="round-top" onclick="app.taskMasterController.createTask()" <!--
+                            id="task">CreateTask</button> -->
                     </div>
                 </div>
             </div>
-            <div class="col-6">
+            <div class="col-6 md-6">
                 <div class="card w-60" style="width:50%;">
                     <div class="card-header">
                         Catagories

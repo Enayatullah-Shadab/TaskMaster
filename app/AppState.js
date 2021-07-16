@@ -4,6 +4,8 @@ import { isValidProp } from "./Utils/isValidProp.js"
 
 class AppState extends EventEmitter {
   /** @type {TaskMaster[]} */
+
+  list = []
   TaskMaster = []
 }
 
@@ -12,10 +14,10 @@ export const ProxyState = new Proxy(new AppState(), {
     isValidProp(target, prop)
     return target[prop]
   },
-  set(target, prop, value) {
+  set(target, prop, TaskMaster) {
     isValidProp(target, prop)
-    target[prop] = value
-    target.emit(prop, value)
+    target[prop] = TaskMaster
+    target.emit(prop, TaskMaster)
     return true
   }
 })

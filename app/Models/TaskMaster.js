@@ -14,32 +14,19 @@
 // }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 export default class TaskMaster {
     constructor(listName, color,) {
         this.listName = listName
         this.color = color
 
-        console.log("Hello form constructor of model")
+
     }
     get Template() {
         return `
     div class="col-6">
                 <div class="card w-60" style="width:50%;">
                     <div class="card-header">
-                        Catagories
+                    ${this.listName}
                     </div>
                     <div class="card-body">
                         <ul>
