@@ -26,7 +26,6 @@ export default class TaskMaster {
     div class="col-6">
                 <div class="card w-60" style="width:50%;">
                     <div class="card-header">
-                    ${this.listName}
                     </div>
                     <div class="card-body">
                         <ul>
