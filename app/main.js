@@ -1,4 +1,4 @@
-import TaskMasterController from "./Controllers/TmasterController.js";
+import TaskMasterController from "./Controllers/TaskMasterController";
 
 class App {
   taskMasterController = new TaskMasterController();
