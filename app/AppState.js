@@ -1,11 +1,13 @@
-import ListMaster from "./Models/ListMaster.js"
+// import ListMaster from "./Models/ListMaster.js"
+// import TaaskMaster from "./Models/TaaskMaster.js"
 import { EventEmitter } from "./Utils/EventEmitter.js"
 import { isValidProp } from "./Utils/isValidProp.js"
 
 class AppState extends EventEmitter {
+  /** @type {ListMaster[]} */
   /** @type {TaskMaster[]} */
 
-  //list = []
+
   ListMaster = []
   TaaskMaster = []
 }

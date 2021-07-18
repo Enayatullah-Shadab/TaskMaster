@@ -18,7 +18,7 @@ export default class TaskMasterController {
     }
     createList() {
         event.preventDefault()
-        console.log("create task in controller")
+        console.log("create list in controller")
         let form = event.target
         let rawTask = {
             name: form.name.value
@@ -26,14 +26,16 @@ export default class TaskMasterController {
         taskMasterService.createList(rawTask)
         form.reset()
     }
-    addList(listId) {
+    addTask(TaskId) {
         event.preventDefault()
+        console.log("create task in controller")
+
         let form = event.target
-        let rawList = {
-            ListId,
+        let rawTask = {
+            TaskId,
             name: form.task.value
         }
-        ListMasterService.addList(rawList)
+        ListMasterService.addTask(rawTask)
         form.reset()
     }
 }
