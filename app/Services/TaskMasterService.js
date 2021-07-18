@@ -1,9 +1,14 @@
 import { ProxyState } from "../AppState.js";
-import TaskMaster from "../Models/TaskMaster.js";
+import ListMaster from "../Models/ListMaster.js";
 
 class TaskMasterService {
-  createTaskMaster() {
-    ProxyState.TaskMaster = [...ProxyState.TaskMaster, new TaskMaster()]
+  createList(rawTask) {
+    console.log("in service crete tsk")
+    ProxyState.ListMaster = [...ProxyState.ListMaster, new ListMaster(rawTask)]
+  }
+
+  addList(rawList) {
+    ProxyState.List = [...ProxyState.List, new Topping(rawList)]
   }
 }
 

@@ -1,12 +1,13 @@
-import TaskMaster from "./Models/TaskMaster.js"
+import ListMaster from "./Models/ListMaster.js"
 import { EventEmitter } from "./Utils/EventEmitter.js"
 import { isValidProp } from "./Utils/isValidProp.js"
 
 class AppState extends EventEmitter {
   /** @type {TaskMaster[]} */
 
-  list = []
-  TaskMaster = []
+  //list = []
+  ListMaster = []
+  TaaskMaster = []
 }
 
 export const ProxyState = new Proxy(new AppState(), {
