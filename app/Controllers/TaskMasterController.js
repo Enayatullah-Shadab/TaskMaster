@@ -6,6 +6,7 @@ import { taskMasterService } from "../Services/TaskMasterService.js"
 function _draw() {
     let myList = ProxyState.ListMaster;
     let template = ''
+    console.log(myList.name)
     myList.forEach(myList => template += myList.Template)
     document.getElementById("cardList").innerHTML = template
 }
@@ -20,23 +21,30 @@ export default class TaskMasterController {
         event.preventDefault()
         console.log("create list in controller")
         let form = event.target
-        let rawTask = {
+        let rawList = {
             name: form.name.value
         }
-        taskMasterService.createList(rawTask)
+        taskMasterService.createList(rawList)
         form.reset()
     }
-    addTask(TaskId) {
+    deleteList(id) {
+        taskMasterService.deleteList(id)
+    }
+    addTask(ListId) {
         event.preventDefault()
         console.log("create task in controller")
+        debugger;
 
         let form = event.target
         let rawTask = {
-            TaskId,
+            ListId,
             name: form.task.value
         }
-        ListMasterService.addTask(rawTask)
+        taskMasterService.addTask(rawTask)
         form.reset()
+    }
+    removeTaaskMaster(id) {
+        pizzasService.removeTaaskMaster(id)
     }
 }
 
