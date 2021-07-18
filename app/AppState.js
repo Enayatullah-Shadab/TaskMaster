@@ -14,10 +14,11 @@ export const ProxyState = new Proxy(new AppState(), {
     isValidProp(target, prop)
     return target[prop]
   },
-  set(target, prop, TaskMaster) {
+  set(target, prop, value) {
     isValidProp(target, prop)
-    target[prop] = TaskMaster
-    target.emit(prop, TaskMaster)
+    target[prop] = value
+    target.emit(prop, value)
     return true
   }
 })
+

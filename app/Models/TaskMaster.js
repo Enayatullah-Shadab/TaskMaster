@@ -1,62 +1,34 @@
-// export default class Value {
-//     constructor(data) {
-//         this.title = data.title
-//     }
-
-//     get Template() {
-
-//         return /*html*/`
-//         <div class="card p-2 value">
-//             ${this.title}
-//         </div>
-//         `
-//     }
-// }
-
+import { ProxyState } from "../AppState.js"
 
 export default class TaskMaster {
-    constructor(listName, color,) {
-        this.listName = listName
+    constructor(name, color) {
+        this.name = name
         this.color = color
-
 
     }
     get Template() {
         return `
-    div class="col-6">
-                <div class="card w-60" style="width:50%;">
-                    <div class="card-header">
-                    </div>
-                    <div class="card-body">
-                        <ul>
-                            <div class="form-check d-flex flex-column">
-                                <label class="form-check-label">
-                                    <input type="checkbox" class="form-check-input" name="" id="almond"
-                                        value="checkedValue" checked>
-                                    Almond milk
-                                </label>
-                                <label class="form-check-label">
-                                    <input type="checkbox" class="form-check-input" name="" id="coconut"
-                                        value="checkedValue" checked>
-                                    Coconut water
-                                </label>
-                                <label class="form-check-label">
-                                    <input type="checkbox" class="form-check-input" name="" id="cucumber"
-                                        value="checkedValue" checked>
-                                    Cucumber
-                                </label>
-                                <label class="form-check-label">
-                                    <input type="checkbox" class="form-check-input" name="" id="apple"
-                                        value="checkedValue" checked>
-                                    Green apples
-                                </label>
-                            </div>
-                        </ul>
-                    </div>
-                    <div class="card-footer text-muted">
-                        <div> <input type="text" placeholder="Add Task"><span id="plus" class="pl-0"> + </span> </div>
-                    </div>
-                </div>  `
+        <div class="col-4 mt-3">
+          <div class="bg-light rounded shadow-light">
+            <div class="d-flex justify-content-around align-items-center rounded-top bg-colorful text-light text-center p-3">
+                <h3>${this.name}</h3>
+                <i class="fa fa-trash action text-danger" title="delete task" onclick="app.TaskMasterController.destroy('${this.id}')"></i>
+            </div>
 
+            <div class="p-2">
+                <ul class="bg-gray lighten-40 p-2 pl-4">
+                <label class="form-check-label form-check d-flex flex-column">
+                    <input type="checkbox" class="form-check-input" name="" id="checkbox"
+                        value="checkedValue" checked>
+
+                </label>
+                </ul>
+            </div>
+            <form onsubmit="app.TaskMasterController.addTask('${this.id}')"> 
+              <input type="text" name="tasking" placeholder="tasking..." required>
+              <button type="submit" class="btn btn-outline-success">+</button>
+            </form>
+          </div>
+        </div>`
     }
 }

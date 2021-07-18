@@ -7,7 +7,7 @@ function _draw() {
     let taskMaster = ProxyState.TaskMaster;
     let template = ''
     taskMaster.forEach(t => template += t.Template)
-    document.getElementById("app").innerHTML = template
+    document.getElementById("cardList").innerHTML = template
 }
 
 //Public
@@ -16,10 +16,10 @@ export default class TaskMasterController {
         ProxyState.on("TaskMaster", _draw);
         _draw()
     }
-
-    createTask(event) {
-        taskMasterService.createTask
+    createTask() {
         console.log("button clicked")
-    }
+        taskMasterService.createTask
 
+    }
 }
+

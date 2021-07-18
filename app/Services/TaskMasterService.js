@@ -3,9 +3,8 @@ import TaskMaster from "../Models/TaskMaster.js";
 
 class TaskMasterService {
   createTaskMaster() {
-    ProxyState.TaskMaster = [...ProxyState.TaskMaster, new TaskMaster({ title: Math.random() })]
+    ProxyState.TaskMaster = [...ProxyState.TaskMaster, new TaskMaster()]
   }
 }
 
 export const taskMasterService = new TaskMasterService();
-
